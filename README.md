@@ -56,4 +56,4 @@ response. It does not yet connect GitHub to Notion. The package is `private` at 
 
 ## License
 
-No license is declared yet.
+MIT. See [LICENSE](LICENSE).
