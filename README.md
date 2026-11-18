@@ -36,3 +36,24 @@ This template has a few built-in NPM scripts:
 | `npm run typecheck` | Type check using the TypeScript compiler.                                                                                                                                       |
 | `npm run format`    | Format using Prettier (also recommended: the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) if you're using VS code.) |
 | `npm run build`     | Build JavaScript into the `dist/` directory. You normally shouldn't need this if you're using `npm start`.                                                                      |
+
+## Repository map
+
+- `src/index.ts`: the script. It reads `NOTION_TOKEN` from `.env` and queries a Notion database.
+- `.github/workflows/ci.yml`: typechecks on pushes and pull requests to `main`.
+- `.github/dependabot.yml`: dependency update configuration.
+- `package.json`, `tsconfig.json`, `.prettierrc`: scripts and configuration.
+
+## How to verify
+
+`npm run typecheck` is the only automated check; it is what CI runs. There is no test suite, and `npm test` is the npm
+placeholder.
+
+## Status and limitations
+
+The script is still the template's example: `database_id` in `src/index.ts` is `FIXME` and it prints the raw query
+response. It does not yet connect GitHub to Notion. The package is `private` at version 1.0.0 and publishes nothing.
+
+## License
+
+No license is declared yet.
